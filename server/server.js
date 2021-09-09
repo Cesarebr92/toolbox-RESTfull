@@ -1,9 +1,11 @@
 require('./config/config');
 const express = require('express');
+const cors = require('cors')
 const http = require('http');
 
 
 const app = express();
+app.use(cors())
 let server = http.createServer(app);  /** * Http Server @type {Server} */
 
 /**
